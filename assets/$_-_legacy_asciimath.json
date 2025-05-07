@@ -1,6 +1,6 @@
 {
     "id": "838408bd-7251-47b4-9cff-25e2d75e2bc6",
-    "scriptName": "$ - AsciiMath",
+    "scriptName": "$ - Legacy AsciiMath",
     "findRegex": "/^(?:\\s*)\\$(.*)\\$(?:\\s*)$/gm",
     "replaceString": "```asciimath\n$1\n```",
     "trimStrings": [],

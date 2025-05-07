@@ -20,8 +20,8 @@ In the [assets](./assets) folder you'll find a collection of regex scripts for a
 
 To use the legacy syntax with `$$` (LaTeX) and `$` (AsciiMath) delimiters in Markdown, import the following scripts with the Regex extension.
 
-* [$$ - LaTeX](./assets/$$_-_latex.json)
-* [$ - AsciiMath](./assets/$_-_asciimath.json)
+* [$$ - Legacy LaTeX](./assets/\$\$_-_legacy_latex.json)
+* [$ - Legacy AsciiMath](./assets/\$_-_legacy_asciimath.json)
 
 ### Example
 

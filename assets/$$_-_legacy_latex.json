@@ -1,6 +1,6 @@
 {
     "id": "de1d8199-914f-40f7-85cd-a9b5d2ce2f3c",
-    "scriptName": "$$ - LaTeX",
+    "scriptName": "$$ - Legacy LaTeX",
     "findRegex": "/^(?:\\s*)\\$\\$(.*)\\$\\$(?:\\s*)$/gm",
     "replaceString": "```latex\n$1\n```",
     "trimStrings": [],
