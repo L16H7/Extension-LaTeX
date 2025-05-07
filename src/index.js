@@ -41,9 +41,8 @@ async function renderMath() {
 
         const parent = block.parentElement;
         if (parent.localName === 'pre') {
-            parent.querySelector('.code-copy')?.remove();
             const node = document.createElement('section');
-            node.innerHTML = parent.innerHTML;
+            node.innerHTML = block.innerHTML;
             parent.parentNode.replaceChild(node, parent);
             katex.render(node.innerText, node, { throwOnError: false, displayMode: true });
         } else {
