@@ -1,0 +1,19 @@
+{
+    "id": "0fc2fc13-2c50-4477-bfcb-3e2f81188764",
+    "scriptName": "\\(",
+    "findRegex": "/\\\\\\((.*?)\\\\\\)/gm",
+    "replaceString": "<code class=\"language-latex\">$1</code>",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2,
+        3
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}
