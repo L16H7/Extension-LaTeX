@@ -1,0 +1,62 @@
+[
+  {
+    "id": "26a0ef79-b682-4c64-9a90-1dff4f311d15",
+    "scriptName": "$$",
+    "findRegex": "/^\\$\\$\\s*\\n*(.*?)\\n*\\s*\\$\\$\\s*$/gm",
+    "replaceString": "```latex\n$1\n```",
+    "trimStrings": [],
+    "placement": [1, 2, 3],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  },
+  {
+    "id": "2b9a3df4-0ddb-4cea-9970-4ae569ef9c87",
+    "scriptName": "$",
+    "findRegex": "/\\$(.*?[^\\\\])\\$/gm",
+    "replaceString": "<code class=\"language-latex\">$1</code>",
+    "trimStrings": [],
+    "placement": [1, 2, 3],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  },
+  {
+    "id": "0fc2fc13-2c50-4477-bfcb-3e2f81188764",
+    "scriptName": "\\(",
+    "findRegex": "/\\\\\\((.*?)\\\\\\)/gm",
+    "replaceString": "<code class=\"language-latex\">$1</code>",
+    "trimStrings": [],
+    "placement": [1, 2, 3],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  },
+  {
+    "id": "83705069-176c-4717-bee5-1e72766cf19d",
+    "scriptName": "\\[",
+    "findRegex": "/^\\\\\\[\\s*\\n*(.*?)\\n*\\s*\\\\\\]\\s*$/gm",
+    "replaceString": "```latex\n$1\n```",
+    "trimStrings": [],
+    "placement": [1, 2, 3],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+  }
+]

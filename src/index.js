@@ -21,13 +21,10 @@ for (const event of events) {
 }
 
 async function renderMath() {
-    const blocks = Array.from(document.querySelectorAll('#chat pre code'));
+    const blocks = document.querySelectorAll('#chat pre > code, #chat code');
 
-    if (blocks.length === 0) {
-        return;
-    }
+    let processed = 0;
 
-    const nodes = [];
     for (const block of blocks) {
         const isLatex = block.classList.contains('custom-language-latex');
         const isAsciiMath = block.classList.contains('custom-language-asciimath');
@@ -43,19 +40,23 @@ async function renderMath() {
         }
 
         const parent = block.parentElement;
-        parent.querySelector('.code-copy')?.remove();
-        nodes.push(parent);
+        if (parent.localName === 'pre') {
+            const node = document.createElement('section');
+            node.innerHTML = block.innerHTML;
+            parent.parentNode.replaceChild(node, parent);
+            katex.render(node.innerText, node, { throwOnError: false, displayMode: true });
+        } else {
+            const node = document.createElement('span');
+            node.innerHTML = block.innerHTML;
+            block.parentNode.replaceChild(node, block);
+            katex.render(node.innerText, node, { throwOnError: false });
+        }
+
+        ++processed;
     }
 
-    if (nodes.length === 0) {
+    if (!processed) {
         return;
-    }
-
-    for (const node of nodes) {
-        katex.render(node.innerText, node, {
-            throwOnError: false,
-            output: 'mathml',
-        });
     }
 
     // Wait for the chat to update.
